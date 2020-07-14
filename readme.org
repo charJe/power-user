@@ -1,0 +1,197 @@
+#+title: Power User Keyboard
+#+author: Charles
+
+[[./images/done.jpg]]
+
+This is a walk through of how I made this keyboard with a non-conventional (extra) bottom row. I hope that it can serve others trying my make custom keyboards.
+
+* Parts and Cost
+| Part             | Vendor              | Price ($) | actual ($) |
+|------------------+---------------------+-----------+------------|
+| Switches (90)    | [[https://novelkeys.xyz/products/novelkeys-x-kailh-box-heavy-switches?variant=3747939942440][novelkeys.xyz]]       |     27.00 |      30.69 |
+| Key caps (alpha) | [[https://pimpmykeyboard.com/dsa-standard-sublimated-keysets/][pimpmykeyboard.com]]  |     50.00 |          0 |
+| Key caps (mods)  | [[https://pimpmykeyboard.com/dsa-standard-sublimated-keysets/][pimpmykeyboard.com]]  |     40.00 |          0 |
+| Custom caps      | [[https://pimpmykeyboard.com/dsa-individual-keys/][pimpmykeyboard.com]]  |     42.00 |          0 |
+| Space bar        | [[https://pimpmykeyboard.com/dsa-3-space/][pimpmykeyboard.com]]  |      5.00 |     137.00 |
+| Case             | [[https://www.pololu.com/laserquote][pololu.com]]          |    142.00 |     156.95 |
+| bolts            | [[https://www.ebay.com/itm/M2-M2-5-M3-M4-M5-M6-Hex-Socket-Countersunk-Flat-Head-Screws-Bolts-304SS-DIN7991-/173979134769][ebay.com]]            |     10.00 |      10.83 |
+| nuts             | [[https://www.ebay.com/itm/Metric-Stainless-Steel-Hex-Nuts-DIN-934-M2-M2-5-M3-M3-5-M4-M5-M6-M8-M10-M12-M14-/112604642017][ebay.com]]            |      3.70 |       4.01 |
+| Controller       | [[https://www.pjrc.com/store/teensy.html][pjrc.com]]            |     16.00 |      23.84 |
+| Diodes (100)     | [[https://www.ebay.com/itm/100pcs-Brand-New-1N4148-switching-signal-DIODE-ST-DO-35-TZM-afe/113797539967?hash=item1a7edca87f:g:pEcAAOSwIK9dErR5][ebay.com]]            |      1.35 |       1.93 |
+| Stabilizers      | [[https://www.amazon.com/dp/B07K8FFDYJ/ref=psdc_12879431_t2_B07K8G6V1J?th=1][amazon.com]]          |      9.00 |       9.74 |
+| USB cable        | [[https://www.amazon.com/gp/product/B000I1IGQ6/ref=ox_sc_act_title_1?smid=A2JSBUBRVPP4SX&psc=1][amazon.com]]          |      3.99 |       4.32 |
+|------------------+---------------------+-----------+------------|
+| Total            | ------------------- |    350.04 |     379.31 |
+#+tblfm: @14$3=vsum(@2$3..@-1$3)::@14$4=vsum(@2$4..@-1$4)
+
+So about $400 if you include tools and maybe paint.
+* Layout
+Go crazy on [[http://www.keyboard-layout-editor.com][keyboard-layout-editor.com]], but keep in mind that colors and legends will be limited mainly by what key caps you can find. Know that you may have to adjust your design or pay extra when it comes to key caps. You can use color swatches (at the top of page) to get an idea of what colors are available from different companies.
+Here was my final design:
+[[./images/layout.png]]
+* Key caps
+I decided Signature Plastics because they have the highest quality custom caps. 
+
+I chose DSA profile because my keyboard has 7 rows, and the 7^th row is unavailable on other profiles. DSA is also aesthetically pleasing. It is easier to change keyboard layouts with a non-sculpted profile such as DSA.
+
+For the material, please use something better than ABS plastic; you want your keyboard to be nice for a very long times; the ones I'm getting are PBT plastic. Along the same lines get Dye-sublimated or Double-shot legends so your legends don't rub away (I've heard mixed opinions about laser engraved, and I don't really know).
+
+First, the space bar. They have a 3 unit one in limited colors; I'll go with grey (GDE). The alpha keys need to match the space bar, so I got TKL English Alpha kit (58 grey (GDE) keys). The modifiers can be whatever color; I got TLK text modifiers (33 blue (BCT) keys). I still need to get some custom ones to complete my abnormal bottom row and right column: 
+- 1 unit:
+  - "|\"
+  - "Menu"
+- 1.25 unit: 
+  - "Fn" \times 2
+- 1.5 unit:
+  - "Hyper"
+  - "Backspace"
+- 1.75 unit:
+  - "Enter"
+- 2 unit:
+  - "Meta" \times 2
+  - "Super" \times 2
+  - "Control" \times 2
+- 2.25 unit:
+  - "Shift"
+These 14 keys will be blue (BCT) except "|\" which will be grey (GDE).
+Here they are laid out on the table:
+[[./images/key-caps.jpg]]
+
+* Case
+Copy the [[https://json.org][json.org]] data from the "</> Raw Data" section of [[http://www.keyboard-layout-editor.com][keyboard-layout-editor.com]] into [[http://www.builder.swillkb.com][builder.swillkb.com]] and use the following settings as a guide.
+** SVG
+If it's not here it is turned off.
+| Switch        | MX              |
+| Stabilizer    | Cherry + Costar |
+| Case          | Sandwich        |
+| USB cutout    | -10, 6          |
+| Mount holes   | 8, 2.1, 6       |
+| Edge padding  | 6, 6, 6, 6      |
+| Plate corners | 2               | 
+| Kerf          | .008            | 
+| Line color    | blue            |
+
+Kerf is important. .008 is for Pololu. If you're using a different laser cutting facility, make sure that you use whatever kerf they specify.
+
+After inputting all the information, have them make the SVG files and download them.
+
+** Laser cutting
+| top, open      | 1/4in wood                    |
+| bottom         | 0.03in stainless steel        |
+| plate          | 0.06in stainless steel        |
+| closed\times2       | 1/8in wood                    |
+|----------------+-------------------------------|
+| Total -------- | 13/16in (20.5mm, 12.7 inside) |
+
+I used Pololu for this part. Just upload the designs and select whatever materials you want. The plate should be a ridged material, and *the thickness should match your switches and stabilizers*. Make sure you have enough space inside the case to fit the micro controller about (mine just barely fit with .5in (12.7mm)). Space inside would be /open/ + /closed/ \times 2.
+
+#+caption: Before painting and countersinking
+[[./images/plate-teensy.jpg]]
+
+#+caption: After painting and countersinking
+[[./images/done-countersink-paint.jpg]]
+* Switches
+I like clicky switches. With some research, I decided on Kailh pale blue BOX switches. I found a set of 90 of them on ali, so I'll have 3 extras. Since we are not using a PCB, make sure the switches are /plate mounted/, the stabilizers should also be /plate mounted/.
+[[./images/switches.jpg]]
+* Firmware
+You should do this before assembly to make sure that everything fits together before soldering. Since I will be using Teensy 2, I'll need the following:
+- Install [[https://www.arduino.cc/en/Main/Software][Arduino]] from their website, not your operating system package manage; the Teensy software only works with the version from their website.
+- Download and follow instructions for installing [[https://www.pjrc.com/teensy/td_download.html][Teensyduino]].
+
+Documentation:
+Get key presses from switches: [[https://www.pjrc.com/teensy/td_digital.html][input documentation]]
+Send key presses to computer: [[https://www.pjrc.com/teensy/td_keyboard.html][output documentation]]
+
+For your firmware you should have a plan on how your rows and columns will connect to your micro-controller. This was my plan:
+
+#+caption: How to connect rows and columns to micro-controller
+[[./images/schema.png]]
+
+#+caption: Which keys are on which row and column
+[[./images/matrix.png]]
+
+* Assembly
+Putting together the case, switches, and key caps should be obvious. The hard part is the wiring. A diode is basically like a [[https://minecraft.gamepedia.com/Redstone_Repeater][redstone repeater]] in that it doesn't let electricity flow "backwards". You can look up how to solder yourself. Remember: 
+  - That the wires should be touching before you apply solder.
+  - Solder flows to the hottest point, so don't remove the soldering iron until you see the solder flowing to the wires.
+  - It's not the end of the world if you mess up; you have extra parts right?
+  - The black stripe on the diode should point away from the switch contact it is soldered to.
+Here is how the matrix works so you can be more confident.
+http://pcbheaven.com/wikipages/How_Key_Matrices_Works/
+[[./images/sample-matrix.gif]]
+
+This part of the guide will me mainly image and example based.
+I would suggest preparing all the wires first before soldering. It's not what I did, but I think it would be better.
+
+** Rows
+#+caption: Before doing anything
+[[./images/before-solder.jpg]]
+
+#+caption: Diode setup
+[[./images/diode-setup.jpg]]
+
+#+caption: Diode after first solder
+[[./images/diode-after-solder-one.jpg]]
+
+#+caption: Diode after first cut
+[[./images/diode-after-cut.jpg]]
+
+#+caption: Diode bend to connect to next switch in row
+[[./images/diode-after-cut2.jpg]]
+
+#+caption: Done with first row. It looks pretty bad, but it works.
+[[./images/done-row-one.jpg]]
+
+#+caption: Other rows look better
+[[./images/done-rows.jpg]]
+
+[[./images/done-rows-close.jpg]]
+
+[[./images/done-rows-closer.jpg]]
+
+** Columns
+It is important to leave as much  insulation on the wires as possible so that they do not have contact with the rows.
+
+#+caption: Setup
+[[./images/column-setup.jpg]]
+
+[[./images/column-setup-close.jpg]]
+
+#+caption: Stripped
+[[./images/column-after-strip.jpg]]
+
+#+caption: Done with first column
+[[./images/done-column-one.jpg]]
+
+#+caption: Finished with wiring
+[[./images/done-wires.jpg]]
+
+Just make sure you stick with the plan. I had to put some gorilla tape on the plate so that the micro-controller wouldn't cause electrical shortages with the stainless steel.
+
+Now you can put key caps on.
+#+caption: I had to cut and bend a regular space stabilizer to fit the 3 unit
+[[./images/stab-space.jpg]]
+
+#+caption: Stabalizer mounts on a shift key
+[[./images/stab-shift.jpg]]
+
+#+caption: Finished
+[[./images/done3.jpg]]
+
+* Hyper Key
+Since Hyper isn't in the USB HID standard, I made the hyper key send right super while both supers keys send left super. Then I tell my computer to interpret right super as hyper. This is my method.
+
+Modify ~/usr/share/X11/xkb/symbols/pc~ like so:
+#+BEGIN_SRC c
+  // replace
+  key <RWIN> {	[ Super_R		]	};
+  // with
+  key <RWIN> {	[ Hyper_R		]	};
+
+  // replace
+  modifier_map Mod4   { <HYPR> };
+  // with
+  modifier_map Mod3   { <HYPR> };
+#+END_SRC
+
+Then reboot computer and it should be working.
