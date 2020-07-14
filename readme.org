@@ -101,7 +101,7 @@ I used Pololu for this part. Just upload the designs and select whatever materia
 #+caption: After painting and countersinking
 [[./images/done-countersink-paint.jpg]]
 * Switches
-I like clicky switches. With some research, I decided on Kailh pale blue BOX switches. I found a set of 90 of them on ali, so I'll have 3 extras. Since we are not using a PCB, make sure the switches are /plate mounted/, the stabilizers should also be /plate mounted/.
+I like clicky switches. With some research, I decided on Kailh pale blue BOX switches. I found a set of 90, so I'll have 3 extras. Since we are not using a PCB, make sure the switches are /plate mounted/, the stabilizers should also be /plate mounted/.
 [[./images/switches.jpg]]
 * Firmware
 You should do this before assembly to make sure that everything fits together before soldering. Since I will be using Teensy 2, I'll need the following:
