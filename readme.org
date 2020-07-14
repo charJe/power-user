@@ -3,7 +3,7 @@
 
 [[./images/done.jpg]]
 
-This is a walk through of how I made this keyboard with a non-conventional (extra) bottom row. I hope that it can serve others trying my make custom keyboards.
+This is a walk through of how I made this keyboard with a non-conventional (extra) bottom row. I hope that it can serve others trying to make custom keyboards.
 
 * Parts and Cost
 | Part             | Vendor              | Price ($) | actual ($) |
@@ -23,8 +23,18 @@ This is a walk through of how I made this keyboard with a non-conventional (extr
 |------------------+---------------------+-----------+------------|
 | Total            | ------------------- |    350.04 |     379.31 |
 #+tblfm: @14$3=vsum(@2$3..@-1$3)::@14$4=vsum(@2$4..@-1$4)
-
 So about $400 if you include tools and maybe paint.
+
+*Switches* are the part that completes the electrical circuit. They are the biggest dictator of the feel of you're keyboard. For the most part, they come in "clicky", "tactile", or "linear". Make sure they are plate mounted.
+*Key caps* are the actual buttons that you touch with your fingers. They usually have letters (legends) on them and are pretty colors. Theses come in different [[https://flashquark.com/wp-content/uploads/2019/08/MDA-Profile-Comparison.jpg][profiles]].
+*Case* is the skeleton of your keyboard. In this case it is like a sandwich: many layers that are screwed together. The *plate* is what the switches will fit into.
+*Bolts* are finely threaded screws that will hold the case together.
+*Nuts* are small hexagonal screw holes that the bolts will screw into to hold the keyboard together. 
+*Controller* or micro-controller is a small computer that will take inputs from the switches and send the appropriate signal to your actual computer.
+*Diode* is like a [[https://minecraft.gamepedia.com/Redstone_Repeater][redstone repeater]] in that it doesn't let electricity flow "backwards". It will make sure you're keyboard works the way you expect it by stopping the "ghosting" and "masking" problems.
+*Stabilizers* keep the long keys on your keyboard from being unstable. Make sure they are plate mounted.
+*USB cable* is a usb-b to usb-a wire to connect your micro-controller to your computer.
+
 * Layout
 Go crazy on [[http://www.keyboard-layout-editor.com][keyboard-layout-editor.com]], but keep in mind that colors and legends will be limited mainly by what key caps you can find. Know that you may have to adjust your design or pay extra when it comes to key caps. You can use color swatches (at the top of page) to get an idea of what colors are available from different companies.
 Here was my final design:
@@ -32,7 +42,7 @@ Here was my final design:
 * Key caps
 I decided Signature Plastics because they have the highest quality custom caps. 
 
-I chose DSA profile because my keyboard has 7 rows, and the 7^th row is unavailable on other profiles. DSA is also aesthetically pleasing. It is easier to change keyboard layouts with a non-sculpted profile such as DSA.
+I chose DSA profile because my keyboard has 7 rows, and the 7th row is unavailable on other profiles. DSA is also aesthetically pleasing. It is easier to change keyboard layouts with a non-sculpted profile such as DSA.
 
 For the material, please use something better than ABS plastic; you want your keyboard to be nice for a very long times; the ones I'm getting are PBT plastic. Along the same lines get Dye-sublimated or Double-shot legends so your legends don't rub away (I've heard mixed opinions about laser engraved, and I don't really know).
 
@@ -79,11 +89,11 @@ After inputting all the information, have them make the SVG files and download t
 | top, open      | 1/4in wood                    |
 | bottom         | 0.03in stainless steel        |
 | plate          | 0.06in stainless steel        |
-| closed\times2       | 1/8in wood                    |
+| closed \times 2     | 1/8in wood                    |
 |----------------+-------------------------------|
 | Total -------- | 13/16in (20.5mm, 12.7 inside) |
 
-I used Pololu for this part. Just upload the designs and select whatever materials you want. The plate should be a ridged material, and *the thickness should match your switches and stabilizers*. Make sure you have enough space inside the case to fit the micro controller about (mine just barely fit with .5in (12.7mm)). Space inside would be /open/ + /closed/ \times 2.
+I used Pololu for this part. Just upload the designs and select whatever materials you want. The plate should be a ridged material, and *the thickness should match your switches and stabilizers*. Make sure you have enough space inside the case to fit the micro controller about (mine just barely fit with .5in (12.7mm)). Space inside would be /open/ + /closed/ \times 2. I chose to use wood so I could countersink, sand, and paint it.
 
 #+caption: Before painting and countersinking
 [[./images/plate-teensy.jpg]]
@@ -111,7 +121,7 @@ For your firmware you should have a plan on how your rows and columns will conne
 [[./images/matrix.png]]
 
 * Assembly
-Putting together the case, switches, and key caps should be obvious. The hard part is the wiring. A diode is basically like a [[https://minecraft.gamepedia.com/Redstone_Repeater][redstone repeater]] in that it doesn't let electricity flow "backwards". You can look up how to solder yourself. Remember: 
+Putting together the case, switches, and key caps should be obvious. The hard part is the wiring. You can look up how to solder yourself. Remember: 
   - That the wires should be touching before you apply solder.
   - Solder flows to the hottest point, so don't remove the soldering iron until you see the solder flowing to the wires.
   - It's not the end of the world if you mess up; you have extra parts right?
@@ -120,7 +130,7 @@ Here is how the matrix works so you can be more confident.
 http://pcbheaven.com/wikipages/How_Key_Matrices_Works/
 [[./images/sample-matrix.gif]]
 
-This part of the guide will me mainly image and example based.
+This part of the guide will be mainly image and example based.
 I would suggest preparing all the wires first before soldering. It's not what I did, but I think it would be better.
 
 ** Rows
@@ -168,7 +178,7 @@ It is important to leave as much  insulation on the wires as possible so that th
 
 Just make sure you stick with the plan. I had to put some gorilla tape on the plate so that the micro-controller wouldn't cause electrical shortages with the stainless steel.
 
-Now you can put key caps on.
+Now you can put key caps on. You will want stabilizers on any keys that are 2 units or longer. If you have Kailh box switches, then you only need stabilizers on keys that are /longer/ than 2 units.
 #+caption: I had to cut and bend a regular space stabilizer to fit the 3 unit
 [[./images/stab-space.jpg]]
 
