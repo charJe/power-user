@@ -160,7 +160,7 @@ I would suggest preparing all the wires first before soldering. It's not what I 
 [[./images/done-rows-closer.jpg]]
 
 ** Columns
-It is important to leave as much  insulation on the wires as possible so that they do not have contact with the rows.
+It is important to leave as much insulation on the wires as possible so that they do not have contact with the rows.
 
 #+caption: Setup
 [[./images/column-setup.jpg]]
