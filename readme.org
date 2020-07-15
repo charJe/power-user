@@ -6,13 +6,13 @@
 This is a walk through of how I made this keyboard with a non-conventional (extra) bottom row. I hope that it can serve others trying to make custom keyboards.
 
 * Parts and Cost
-| Part             | Vendor              | Price ($) | actual ($) |
+| Part             | Vendor              | Price ($) | Actual ($) |
 |------------------+---------------------+-----------+------------|
 | Switches (90)    | [[https://novelkeys.xyz/products/novelkeys-x-kailh-box-heavy-switches?variant=3747939942440][novelkeys.xyz]]       |     27.00 |      30.69 |
 | Key caps (alpha) | [[https://pimpmykeyboard.com/dsa-standard-sublimated-keysets/][pimpmykeyboard.com]]  |     50.00 |          0 |
 | Key caps (mods)  | [[https://pimpmykeyboard.com/dsa-standard-sublimated-keysets/][pimpmykeyboard.com]]  |     40.00 |          0 |
 | Custom caps      | [[https://pimpmykeyboard.com/dsa-individual-keys/][pimpmykeyboard.com]]  |     42.00 |          0 |
-| Space bar        | [[https://pimpmykeyboard.com/dsa-3-space/][pimpmykeyboard.com]]  |      5.00 |     137.00 |
+| Space bar        | [[https://pimpmykeyboard.com/dsa-3-space/][pimpmykeyboard.com]]  |      5.00 |     137.00 | This is the total for key caps
 | Case             | [[https://www.pololu.com/laserquote][pololu.com]]          |    142.00 |     156.95 |
 | bolts            | [[https://www.ebay.com/itm/M2-M2-5-M3-M4-M5-M6-Hex-Socket-Countersunk-Flat-Head-Screws-Bolts-304SS-DIN7991-/173979134769][ebay.com]]            |     10.00 |      10.83 |
 | nuts             | [[https://www.ebay.com/itm/Metric-Stainless-Steel-Hex-Nuts-DIN-934-M2-M2-5-M3-M3-5-M4-M5-M6-M8-M10-M12-M14-/112604642017][ebay.com]]            |      3.70 |       4.01 |
