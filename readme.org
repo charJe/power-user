@@ -6,23 +6,24 @@
 This is a walk through of how I made this keyboard with a non-conventional (extra) bottom row. I hope that it can serve others trying to make custom keyboards.
 
 * Parts and Cost
-| Part             | Vendor              | Price ($) | Actual ($) |
-|------------------+---------------------+-----------+------------|
-| Switches (90)    | [[https://novelkeys.xyz/products/novelkeys-x-kailh-box-heavy-switches?variant=3747939942440][novelkeys.xyz]]       |     27.00 |      30.69 |
-| Key caps (alpha) | [[https://pimpmykeyboard.com/dsa-standard-sublimated-keysets/][pimpmykeyboard.com]]  |     50.00 |      50.00 |
-| Key caps (mods)  | [[https://pimpmykeyboard.com/dsa-standard-sublimated-keysets/][pimpmykeyboard.com]]  |     40.00 |      40.00 |
-| Custom caps      | [[https://pimpmykeyboard.com/dsa-individual-keys/][pimpmykeyboard.com]]  |     42.00 |      42.00 |
-| Space bar        | [[https://pimpmykeyboard.com/dsa-3-space/][pimpmykeyboard.com]]  |      5.00 |       5.00 |
-| Case             | [[https://www.pololu.com/laserquote][pololu.com]]          |    142.00 |     156.95 |
-| bolts            | [[https://www.ebay.com/itm/M2-M2-5-M3-M4-M5-M6-Hex-Socket-Countersunk-Flat-Head-Screws-Bolts-304SS-DIN7991-/173979134769][ebay.com]]            |     10.00 |      10.83 |
-| nuts             | [[https://www.ebay.com/itm/Metric-Stainless-Steel-Hex-Nuts-DIN-934-M2-M2-5-M3-M3-5-M4-M5-M6-M8-M10-M12-M14-/112604642017][ebay.com]]            |      3.70 |       4.01 |
-| Controller       | [[https://www.pjrc.com/store/teensy.html][pjrc.com]]            |     16.00 |      23.84 |
-| Diodes (100)     | [[https://www.ebay.com/itm/100pcs-Brand-New-1N4148-switching-signal-DIODE-ST-DO-35-TZM-afe/113797539967?hash=item1a7edca87f:g:pEcAAOSwIK9dErR5][ebay.com]]            |      1.35 |       1.93 |
-| Stabilizers      | [[https://www.amazon.com/dp/B07K8FFDYJ/ref=psdc_12879431_t2_B07K8G6V1J?th=1][amazon.com]]          |      9.00 |       9.74 |
-| USB cable        | [[https://www.amazon.com/gp/product/B000I1IGQ6/ref=ox_sc_act_title_1?smid=A2JSBUBRVPP4SX&psc=1][amazon.com]]          |      3.99 |       4.32 |
-|------------------+---------------------+-----------+------------|
-| Total            | ------------------- |    350.04 |     379.31 |
-#+tblfm: @14$3=vsum(@2$3..@-1$3)::@14$4=vsum(@2$4..@-1$4)
+| Part             | Vendor               | Price ($) | Actual ($) |
+|------------------+----------------------+-----------+------------|
+| Switches (90)    | [[https://novelkeys.xyz/products/novelkeys-x-kailh-box-heavy-switches?variant=3747939942440][novelkeys.xyz]]        |     27.00 |      30.69 |
+| Key caps (alpha) | [[https://pimpmykeyboard.com/dsa-standard-sublimated-keysets/][pimpmykeyboard.com]]   |     50.00 |      50.00 |
+| Key caps (mods)  | [[https://pimpmykeyboard.com/dsa-standard-sublimated-keysets/][pimpmykeyboard.com]]   |     40.00 |      40.00 |
+| Custom caps      | [[https://pimpmykeyboard.com/dsa-individual-keys/][pimpmykeyboard.com]]   |     42.00 |      42.00 |
+| Space bar        | [[https://pimpmykeyboard.com/dsa-3-space/][pimpmykeyboard.com]]   |      5.00 |       5.00 |
+| Case             | [[https://www.pololu.com/laserquote][pololu.com]]           |    142.00 |     156.95 |
+| bolts            | [[https://www.ebay.com/itm/M2-M2-5-M3-M4-M5-M6-Hex-Socket-Countersunk-Flat-Head-Screws-Bolts-304SS-DIN7991-/173979134769][ebay.com]]             |     10.00 |      10.83 |
+| nuts             | [[https://www.ebay.com/itm/Metric-Stainless-Steel-Hex-Nuts-DIN-934-M2-M2-5-M3-M3-5-M4-M5-M6-M8-M10-M12-M14-/112604642017][ebay.com]]             |      3.70 |       4.01 |
+| Controller       | [[https://www.pjrc.com/store/teensy.html][pjrc.com]]             |     16.00 |      23.84 |
+| Diodes (100)     | [[https://www.ebay.com/itm/100pcs-Brand-New-1N4148-switching-signal-DIODE-ST-DO-35-TZM-afe/113797539967?hash=item1a7edca87f:g:pEcAAOSwIK9dErR5][ebay.com]]             |      1.35 |       1.93 |
+| Stabilizers      | [[https://www.amazon.com/dp/B07K8FFDYJ/ref=psdc_12879431_t2_B07K8G6V1J?th=1][amazon.com]]           |      9.00 |       9.74 |
+| USB cable        | [[https://www.amazon.com/gp/product/B000I1IGQ6/ref=ox_sc_act_title_1?smid=A2JSBUBRVPP4SX&psc=1][amazon.com]]           |      3.99 |       4.32 |
+| Feet             | Lowes hardware store |      5.69 |       6.47 |
+|------------------+----------------------+-----------+------------|
+| Total            | -------------------  |    355.73 |     385.78 |
+#+tblfm: @15$3=vsum(@2$3..@-1$3)::@15$4=vsum(@2$4..@-1$4)
 So about $400 if you include tools and maybe paint.
 
 *Switches* are the parts that complete the electrical circuits. They are the biggest dictator of the feel of your keyboard. For the most part, they come in clicky, tactile, or linear. Make sure they are plate mounted.
@@ -187,6 +188,9 @@ Stabalizer mounts on a shift key
 
 Finished
 [[./images/done3.jpg]]
+
+Slap some washing machine feet on the bottom for maximum stability!
+[[./images/feet.jpg]]
 
 * Hyper Key
 Since Hyper isn't in the USB HID standard, I made the hyper key send right super while both supers keys send left super. Then I tell my computer to interpret right super as hyper. This is my method.
