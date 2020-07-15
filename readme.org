@@ -121,7 +121,7 @@ Which keys are on which row and column
 [[./images/matrix.png]]
 This is reversed because when you are actually soldering, you're looking at the back of the keyboard.
 * Assembly
-Putting together the case, switches, and key caps should be obvious. The hard part is the wiring. You can look up how to solder yourself. Remember: 
+Putting together the case, switches, and key caps should be obvious. The hard part is the wiring. You can look up how to solder by yourself. Remember: 
   - That the wires should be touching before you apply solder.
   - Solder flows to the hottest point, so don't remove the soldering iron until you see the solder flowing to the wires.
   - It's not the end of the world if you mess up; you have extra parts right?
