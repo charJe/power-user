@@ -95,10 +95,10 @@ After inputting all the information, have them make the SVG files and download t
 
 I used Pololu for this part. Just upload the designs and select whatever materials you want. The plate should be a ridged material, and *the thickness should match your switches and stabilizers*. Make sure you have enough space inside the case to fit the micro controller about (mine just barely fit with .5in (12.7mm)). Space inside would be /open/ + /closed/ \times 2. I chose to use wood so I could countersink, sand, and paint it.
 
-#+caption: Before painting and countersinking
+Before painting and countersinking
 [[./images/plate-teensy.jpg]]
 
-#+caption: After painting and countersinking
+After painting and countersinking
 [[./images/done-countersink-paint.jpg]]
 * Switches
 I like clicky switches. With some research, I decided on Kailh pale blue BOX switches. I found a set of 90, so I'll have 3 extras. Since we are not using a PCB, make sure the switches are /plate mounted/, the stabilizers should also be /plate mounted/.
@@ -114,10 +114,10 @@ Send key presses to computer: [[https://www.pjrc.com/teensy/td_keyboard.html][ou
 
 For your firmware you should have a plan on how your rows and columns will connect to your micro-controller. This was my plan:
 
-#+caption: How to connect rows and columns to micro-controller
+How to connect rows and columns to micro-controller
 [[./images/schema.png]]
 
-#+caption: Which keys are on which row and column
+Which keys are on which row and column
 [[./images/matrix.png]]
 
 * Assembly
@@ -134,25 +134,25 @@ This part of the guide will be mainly image and example based.
 I would suggest preparing all the wires first before soldering. It's not what I did, but I think it would be better.
 
 ** Rows
-#+caption: Before doing anything
+Before doing anything
 [[./images/before-solder.jpg]]
 
-#+caption: Diode setup
+Diode setup
 [[./images/diode-setup.jpg]]
 
-#+caption: Diode after first solder
+Diode after first solder
 [[./images/diode-after-solder-one.jpg]]
 
-#+caption: Diode after first cut
+Diode after first cut
 [[./images/diode-after-cut.jpg]]
 
-#+caption: Diode bend to connect to next switch in row
+Diode bend to connect to next switch in row
 [[./images/diode-after-cut2.jpg]]
 
-#+caption: Done with first row. It looks pretty bad, but it works.
+Done with first row. It looks pretty bad, but it works.
 [[./images/done-row-one.jpg]]
 
-#+caption: Other rows look better
+Other rows look better
 [[./images/done-rows.jpg]]
 
 [[./images/done-rows-close.jpg]]
@@ -162,30 +162,30 @@ I would suggest preparing all the wires first before soldering. It's not what I 
 ** Columns
 It is important to leave as much insulation on the wires as possible so that they do not have contact with the rows.
 
-#+caption: Setup
+Setup
 [[./images/column-setup.jpg]]
 
 [[./images/column-setup-close.jpg]]
 
-#+caption: Stripped
+Stripped
 [[./images/column-after-strip.jpg]]
 
-#+caption: Done with first column
+Done with first column
 [[./images/done-column-one.jpg]]
 
-#+caption: Finished with wiring
+Finished with wiring
 [[./images/done-wires.jpg]]
 
 Just make sure you stick with the plan. I had to put some gorilla tape on the plate so that the micro-controller wouldn't cause electrical shortages with the stainless steel.
 
 Now you can put key caps on. You will want stabilizers on any keys that are 2 units or longer. If you have Kailh box switches, then you only need stabilizers on keys that are /longer/ than 2 units.
-#+caption: I had to cut and bend a regular space stabilizer to fit the 3 unit
+I had to cut and bend a regular space stabilizer to fit the 3 unit
 [[./images/stab-space.jpg]]
 
-#+caption: Stabalizer mounts on a shift key
+Stabalizer mounts on a shift key
 [[./images/stab-shift.jpg]]
 
-#+caption: Finished
+Finished
 [[./images/done3.jpg]]
 
 * Hyper Key
